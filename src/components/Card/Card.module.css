@@ -1,4 +1,3 @@
-@import url("http://fonts.cdnfonts.com/css/harry-potter");
 .scene {
   width: 12rem;
   height: 17rem;
@@ -45,7 +44,7 @@
 }
 .data {
   color: #c08229;
-  font-family: Harry Potter, serif;
+  font-family: serif;
   list-style: none;
   width: 100%;
   font-size: 1.2rem;
