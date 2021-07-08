@@ -1,0 +1,42 @@
+.nav_container {
+  display: flex;
+  align-items: center;
+}
+.form {
+  width: 50%;
+  margin-left: 1%;
+}
+.searchBar {
+  width: 80%;
+  display: inline;
+  height: 40px;
+  background: transparent;
+  border: 3px solid lightgray;
+  color: lightgray;
+}
+.searchBar::placeholder {
+  color: lightgray;
+  font-size: 15px;
+}
+.img_container {
+  width: 40%;
+}
+.icono {
+  width: 70%;
+}
+.submit {
+  display: inline;
+  width: 15%;
+  margin-left: 2%;
+}
+
+@media (max-width: 900px) {
+  .icono {
+    width: 95%;
+  }
+}
+@media (max-width: 1010spx) {
+  .icono {
+    width: 90%;
+  }
+}
