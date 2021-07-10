@@ -2,7 +2,7 @@ import Nav from "./components/Nav/Nav";
 import {BrowserRouter, Route} from "react-router-dom"
 import Cards from "./components/Cards/Cards"
 import {useState, useEffect} from "react"
-import CharacterDetail from "./components/CharacterDetail/CharacterDetail";
+
 
 function App() {
   
@@ -40,13 +40,7 @@ function App() {
       <Route exact path="/search/" >
             <Cards characters={searchCharacters}/>
       </Route>
-      <Route
-            exact path="/character/:name"
-            
-            render={({match}) => <CharacterDetail
-            name={match.params.name} characters={characters}/>
-            }
-          />
+    
       
       
       </BrowserRouter>

@@ -1,11 +1,11 @@
 import React from "react"
 import style from "./Card.module.css"
-import { Link } from "react-router-dom"
+
 
 export default function Card({ name, house, actor, image, species, id }) {
     
     return (
-        <Link to={"/character/" + name}>
+        
         <div className={style.scene} >
 
             <div className={style.card}>
@@ -28,7 +28,7 @@ export default function Card({ name, house, actor, image, species, id }) {
 
         </div>
         
-        </Link>
+        
 
     )
 }
