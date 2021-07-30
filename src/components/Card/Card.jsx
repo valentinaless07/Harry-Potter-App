@@ -2,8 +2,10 @@ import React from "react"
 import style from "./Card.module.css"
 
 
-export default function Card({ name, house, actor, image, species, id }) {
-    
+export default function Card({ name, house, actor, image, species}) {
+    if(!house){
+        house = "Unknown"
+    }
     return (
         
         <div className={style.scene} >

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "harryp";
+  src: url("/src/components/font/harryp.TTF");
+}
 .scene {
   width: 12rem;
   height: 17rem;
@@ -38,16 +42,16 @@
   border: 1.5px solid #b4b5b3;
 }
 .data_title {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   color: #c08229;
-  font-family: Harry Potter, serif;
+  font-family: harryp, serif;
 }
 .data {
   color: #c08229;
-  font-family: serif;
+  font-family: harryp, serif;
   list-style: none;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .strong {
   font-weight: bold;

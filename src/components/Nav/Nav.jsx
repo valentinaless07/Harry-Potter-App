@@ -6,23 +6,39 @@ import style from "./Nav.module.css"
 
 
 
+
 export default function Nav(props) {
     const [input, Setinput] = useState("")
+    const [music, Setmusic] = useState("MUSIC ON")
 
     const onChange = (e) => {
         Setinput(e.target.value)
-        props.searchByName(input)
-        props.history.push('/search')
+        if(e.target.value.length > 0){
+            props.searchByName(input)
+        props.history.push('/home/search')
+        }
+        else{
+            props.history.push("/home")
+        }
 
     }
 
-    
+    function changeMusic () {
+        if(music === "MUSIC ON"){
+            Setmusic("MUSIC OFF")
+            document.getElementById("home_music").pause()
+        }
+        else{
+            Setmusic("MUSIC ON")
+            document.getElementById("home_music").play() 
+        }
+    }
 
     
 
     return(
         <div className={style.nav_container}>
-            <NavLink to="/" className={style.img_container}>
+            <NavLink to="/home" className={style.img_container}>
             <img src={icono} alt="" className={style.icono}/>
             </NavLink>
             <form className={style.form} >
@@ -30,7 +46,7 @@ export default function Nav(props) {
                 
             </form>
             
-            
+            <h2 className={style.mute} onClick={changeMusic}>{music}</h2>
 
         </div>
     )

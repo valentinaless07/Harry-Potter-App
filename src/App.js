@@ -2,6 +2,7 @@ import Nav from "./components/Nav/Nav";
 import {BrowserRouter, Route} from "react-router-dom"
 import Cards from "./components/Cards/Cards"
 import {useState, useEffect} from "react"
+import Prev from "./components/Prev/Prev";
 
 
 function App() {
@@ -32,12 +33,15 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Route path="/"  render={(props) =><Nav searchByName={searchByName} history={props.history}/>}/>
-      <Route exact path="/" >
+      <Route exact path="/">
+        <Prev/>
+      </Route>
+      <Route path="/home"  render={(props) =><Nav searchByName={searchByName} history={props.history}/>}/>
+      <Route exact path="/home" >
         <Cards characters={characters}/>
       </Route>
 
-      <Route exact path="/search/" >
+      <Route exact path="/home/search" >
             <Cards characters={searchCharacters}/>
       </Route>
     

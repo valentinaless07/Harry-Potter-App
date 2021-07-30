@@ -1,13 +1,19 @@
+@font-face {
+  font-family: "harryp";
+  src: url("/src/components/font/harryp.TTF");
+}
+
 .nav_container {
   display: flex;
   align-items: center;
 }
 .form {
-  width: 50%;
-  margin-left: 1%;
+  width: 30%;
+  margin-right: 7%;
+  margin-left: -50px;
 }
 .searchBar {
-  width: 80%;
+  width: 100%;
   display: inline;
   height: 40px;
   background: transparent;
@@ -16,7 +22,7 @@
 }
 .searchBar::placeholder {
   color: lightgray;
-  font-size: 15px;
+  font-size: 2.5vh;
 }
 .img_container {
   width: 40%;
@@ -34,9 +40,27 @@
   .icono {
     width: 95%;
   }
+  .form {
+    margin-left: 2%;
+  }
+  .searchBar::placeholder {
+    color: lightgray;
+    font-size: 1.5vh;
+  }
 }
+
 @media (max-width: 1010spx) {
   .icono {
     width: 90%;
   }
+}
+.mute {
+  width: 15%;
+  height: 15%;
+  color: white;
+  font-family: "harryp";
+  font-size: 3vw;
+}
+.mute:hover {
+  color: #da912c;
 }

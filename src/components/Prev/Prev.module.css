@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "harryp";
+  src: url("/src/components/font/harryp.TTF");
+}
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+}
+.btn {
+  background-color: rgb(192, 130, 41);
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  letter-spacing: 1px;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  text-shadow: 0px 0px 6px rgb(255, 255, 255);
+}
+.text {
+  font-family: harryp;
+  font-size: 4rem;
+  color: #81291c;
+}
+.link {
+  text-decoration: none;
+}
