@@ -60,6 +60,7 @@
   color: white;
   font-family: "harryp";
   font-size: 3vw;
+  cursor: pointer;
 }
 .mute:hover {
   color: #da912c;
