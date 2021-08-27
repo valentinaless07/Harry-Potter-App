@@ -11,7 +11,7 @@ export default function Prev () {
         <div className={style.div}>
             <Link className={style.link} to="/home" onClick={playMusic}>
             <div className={style.btn}>
-            <span className={style.text}>COMENZAR</span>
+            <span className={style.text}>START</span>
             </div>
             </Link>
         </div>
