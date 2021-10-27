@@ -11,7 +11,7 @@ export default function Cards(characters) {
     return (
         
         <div className={style.cards_container}>
-            {characters.characters.map(e => <Card name={e.name} house={e.house} actor={e.actor} image={e.image} species={e.species} key={state.key += 1}/>)
+            {characters.characters.map(e => e.image.length > 0 && <Card name={e.name} house={e.house} actor={e.actor} image={e.image} species={e.species} key={state.key += 1}/>)
             
             }
 
