@@ -6,6 +6,9 @@ export default function Card({ name, house, actor, image, species}) {
     if(!house){
         house = "Unknown"
     }
+
+
+     
     return (
         
         <div className={style.scene} >
@@ -15,7 +18,7 @@ export default function Card({ name, house, actor, image, species}) {
                     <img src={image} alt="" className={style.img} />
                 </div>
 
-                <div className={style.back}>
+                <div className={`${style.back} ${style['back_'+house]}`}>
 
                     <h1 className={style.data_title}>{name}</h1>
 

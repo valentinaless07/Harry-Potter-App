@@ -7,24 +7,27 @@ import Prev from "./components/Prev/Prev";
 
 function App() {
   
+  const [actualCharacters, setActualCharacters] = useState([])
   const [characters, setCharacters] = useState([])
-  const [searchCharacters, setSearchCharacters] = useState([])
 
   
   useEffect(()=> fetch("https://hp-api.herokuapp.com/api/characters")
   .then(r => r.json())
   .then((recurso) => {
       setCharacters(recurso)
+      setActualCharacters(recurso)
   })
 , [])
 
  function searchByName (name) {
-  fetch("https://hp-api.herokuapp.com/api/characters")
-  .then(r => r.json())
-  .then((recurso) => {
-      setSearchCharacters(recurso.filter(el => el.name.toUpperCase().includes(name.toUpperCase())))
+   
+   if(name === ''){
+     setActualCharacters(characters)
+     return
+   }
+      setActualCharacters(characters.filter(el => el.name.toUpperCase().includes(name.toUpperCase())))
       
-  })
+  
  }
  
 
@@ -38,12 +41,10 @@ function App() {
       </Route>
       <Route path="/home"  render={(props) =><Nav searchByName={searchByName} history={props.history}/>}/>
       <Route exact path="/home" >
-        <Cards characters={characters}/>
+        <Cards characters={actualCharacters}/>
       </Route>
 
-      <Route exact path="/home/search" >
-            <Cards characters={searchCharacters}/>
-      </Route>
+      
     
       
       

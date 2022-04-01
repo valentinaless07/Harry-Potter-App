@@ -13,13 +13,16 @@ export default function Nav(props) {
 
     const onChange = (e) => {
         Setinput(e.target.value)
-        if(e.target.value.length > 0){
-            props.searchByName(input)
-        props.history.push('/home/search')
+        
+        if(!e.target.value){
+            props.searchByName('')
+            return
         }
-        else{
-            props.history.push("/home")
-        }
+        
+        props.searchByName(e.target.value)
+       
+        
+       
 
     }
 
